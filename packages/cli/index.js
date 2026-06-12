@@ -7,7 +7,7 @@ const action = process.argv[2];
 const component = process.argv[3];
 
 // Update this URL once you deploy your 'public/registry/' directory to Vercel/Netlify
-const REGISTRY_BASE_URL = "https://your-domain.com/registry";
+const REGISTRY_BASE_URL = "https://shadcn-3d-ui.vercel.app/registry";
 
 if (action === "add" && component) {
     console.log(`\n📦 \x1b[36m3D-UI Engine:\x1b[0m Resolving installation recipe for "${component}"...`);
