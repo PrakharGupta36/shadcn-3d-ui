@@ -1,23 +1,22 @@
 #!/usr/bin/env node
 
-// Safe, clean, and modern ES module import syntax
 import { execSync } from "node:child_process";
 
 const action = process.argv[2];
 const component = process.argv[3];
 
-// Update this URL once you deploy your 'public/registry/' directory to Vercel/Netlify
-const REGISTRY_BASE_URL = "https://shadcn-3d-ui.vercel.app/registry";
+const REGISTRY_INDEX_URL = "https://shadcn-3d-ui.vercel.app/registry/index.json";
 
 if (action === "add" && component) {
     console.log(`\n📦 \x1b[36m3D-UI Engine:\x1b[0m Resolving installation recipe for "${component}"...`);
 
-    const componentRegistryUrl = `${REGISTRY_BASE_URL}/${component}.json`;
+    // Format matching the new shadcn multi-item index selector rule
+    const targetRegistryCommand = `${REGISTRY_INDEX_URL}:${component}`;
 
     try {
-        execSync(`npx shadcn@latest add ${componentRegistryUrl}`, { stdio: "inherit" });
+        execSync(`npx shadcn@latest add ${targetRegistryCommand}`, { stdio: "inherit" });
     } catch (error) {
-        console.error(`\n❌ \x1b[31mError:\x1b[0m Failed to execute shadcn installation for ${component}.`);
+        console.error(`\n❌ \x1b[31mError:\x1b[0m Failed to execute shadcn installation.`);
         process.exit(1);
     }
 } else {
