@@ -1,0 +1,8 @@
+{
+  "name": "3d-ui",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "3d-ui": "./bin/index.js"
+  }
+}
