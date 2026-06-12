@@ -1,0 +1,20 @@
+{
+  "name": "3d-ui",
+  "version": "0.1.0",
+  "description": "CLI installer engine wrapper for the 3d-ui component ecosystem",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "3d-ui": "./index.js"
+  },
+  "keywords": [
+    "shadcn",
+    "3d",
+    "threejs",
+    "cli"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

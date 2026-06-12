@@ -1,0 +1,23 @@
+{
+  "name": "card-3d",
+  "type": "registry:ui",
+  "dependencies": [
+    "@react-three/fiber",
+    "@react-three/drei",
+    "three",
+    "lucide-react"
+  ],
+  "registryDependencies": ["card"],
+  "files": [
+    {
+      "path": "3d-ui/card-3d.tsx",
+      "type": "registry:ui",
+      "target": "components/3d-ui/card-3d.tsx"
+    },
+    {
+      "path": "3d-ui/card-3d-scene.tsx",
+      "type": "registry:ui",
+      "target": "components/3d-ui/card-3d-scene.tsx"
+    }
+  ]
+}
