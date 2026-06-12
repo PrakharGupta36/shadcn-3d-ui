@@ -4,7 +4,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Card3DContent } from "@/packages/3d-ui/src";
+import { Card3DContent } from "@/public/registry/3d-ui";
 
 export default function Home() {
   return (
