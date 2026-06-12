@@ -17,19 +17,9 @@
       "registryDependencies": ["card"],
       "files": [
         {
-          "path": "registry/3d-ui/card-3d/card-3d.txt",
+          "path": "components/3d-ui/card-3d.tsx",
           "type": "registry:ui",
-          "target": "components/3d-ui/card-3d/card-3d.tsx"
-        },
-        {
-          "path": "registry/3d-ui/card-3d/card-3d-scene.txt",
-          "type": "registry:ui",
-          "target": "components/3d-ui/card-3d/card-3d-scene.tsx"
-        },
-        {
-          "path": "registry/3d-ui/card-3d/card-3d-fallback.txt",
-          "type": "registry:ui",
-          "target": "components/3d-ui/card-3d/card-3d-fallback.tsx"
+          "target": "components/3d-ui/card-3d.tsx"
         }
       ]
     }
