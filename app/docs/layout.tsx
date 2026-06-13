@@ -1,9 +1,9 @@
 "use client";
 
 import Sidebar from "@/components/navigation/sidebar";
+import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function DocsLayout({
   children,
@@ -12,15 +12,15 @@ export default function DocsLayout({
 }) {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 antialiased selection:bg-white selection:text-black">
-      {/* Primary Structural Wrapper - Expanded to max-w-7xl and relaxed to py-20 for better spatial flow */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10 flex flex-col lg:flex-row gap-16 items-start">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-24 lg:py-10 flex flex-col lg:flex-row gap-16 items-start">
         {/* Left Column Structural Shell Container */}
-        <div className="w-full lg:w-56 shrink-0 flex flex-col gap-8 lg:sticky lg:top-7 self-start">
-          {/* Minimalist Awwwards-style Back navigation button action */}
+        <div className="w-full lg:w-56 shrink-0 flex flex-col gap-8 lg:sticky lg:top-10 self-start">
+          {/* Desktop-only back button */}
           <motion.div
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="hidden lg:block"
           >
             <Link
               href="/"
@@ -39,7 +39,7 @@ export default function DocsLayout({
         </div>
 
         {/* Right-hand Main Content viewport area */}
-        <main className="flex-1 min-w-0 w-full  dynamic-content-entry">
+        <main className="flex-1 min-w-0 w-full dynamic-content-entry">
           {children}
         </main>
       </div>
